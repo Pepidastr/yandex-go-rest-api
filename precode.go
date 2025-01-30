@@ -118,11 +118,8 @@ func main() {
 
 	// здесь регистрируйте ваши обработчики
 	r.Get("/tasks", getTasks)
-
 	r.Get("/tasks/{id}", getTask)
-
 	r.Post("/tasks", postTask)
-
 	r.Delete("/tasks/{id}", deleteTask)
 
 	if err := http.ListenAndServe(":8080", r); err != nil {
